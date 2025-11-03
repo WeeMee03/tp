@@ -20,18 +20,18 @@ public class HelpWindow extends UiPart<Stage> {
             + String.format("%-18s %-12s %s%n", "Action", "Type", "Format")
             + String.format("%-18s %-12s %s%n", "──────────────────", "────────────",
                     "──────────────────────────────────────────────────────────────────────")
+            // General
             + String.format("%-18s %-12s %s%n", "Help", "General", "help")
             + "\n"
             + String.format("%-18s %-12s %s%n", "Add", "General",
                     "add n/NAME p/PHONE e/EMAIL a/ADDRESS c/CATEGORY")
             + String.format("%-32s%s%n", "", "e.g., add n/James Ho p/98765432 e/jamesho@example.com")
-            + String.format("%-32s%s%n", "", "      a/123, Clementi Rd c/Customer")
+            + String.format("%-32s%s%n", "", "      a/123, Clementi Rd, 1234665 c/Customer")
             + "\n"
             + String.format("%-18s %-12s %s%n", "List", "General", "list")
             + "\n"
             + String.format("%-18s %-12s %s%n", "Edit", "General",
-                    "edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS]")
-            + String.format("%-32s%s%n", "", "         [c/CATEGORY]")
+                    "edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [c/CATEGORY]")
             + String.format("%-32s%s%n", "", "e.g., edit 2 n/James Lee e/jameslee@example.com")
             + "\n"
             + String.format("%-18s %-12s %s%n", "Find", "General", "find KEYWORD [MORE_KEYWORDS]")
@@ -47,19 +47,27 @@ public class HelpWindow extends UiPart<Stage> {
             + "\n"
             + String.format("%-18s %-12s %s%n", "Exit", "General", "exit")
             + "\n"
+            // Customer
             + String.format("%-18s %-12s %s%n", "Update Points", "Customer",
                     "updatePoints p/PHONE b/BILL_AMOUNT")
             + String.format("%-32s%s%n", "", "e.g., updatePoints p/98765432 b/100.00")
             + "\n"
+            + String.format("%-18s %-12s %s%n", "Reduce Points", "Customer",
+                    "reducePoints p/PHONE pts/POINTS_TO_REDUCE")
+            + String.format("%-32s%s%n", "", "e.g., reducePoints p/91234567 pts/500")
+            + "\n"
+            // General (Customer summary)
+            + String.format("%-18s %-12s %s%n", "Customer Summary", "General", "customerSummary")
+            + "\n"
+            // Staff
             + String.format("%-18s %-12s %s%n", "Update Shift", "Staff",
                     "updateShift p/PHONE s/SHIFT")
             + String.format("%-32s%s%n", "", "e.g., updateShift p/98765432 s/PM")
             + "\n"
+            // Supplier
             + String.format("%-18s %-12s %s%n", "Add Order", "Supplier",
-                    "addOrder p/PHONE i/ITEM_NAME q/QUANTITY u/UNIT_PRICE")
-            + String.format("%-32s%s%n", "", "         d/DELIVERY_DAY")
-            + String.format("%-32s%s%n", "", "e.g., addOrder p/91234567 i/Chicken q/20 u/5.60")
-            + String.format("%-32s%s%n", "", "      d/every Tuesday")
+                    "addOrder p/PHONE i/ITEM_NAME q/QUANTITY u/UNIT_PRICE d/DELIVERY_DAY")
+            + String.format("%-32s%s%n", "", "e.g., addOrder p/91234567 i/Chicken q/20 u/5.60 d/every Tuesday")
             + "\n"
             + String.format("%-18s %-12s %s%n", "Update Order", "Supplier",
                     "updateOrder p/PHONE o/ORDER_INDEX [i/ITEM_NAME]")
